@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "name": "mui-phone-input",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "start": "react-scripts start",
     "test": "CI=true react-scripts test"
@@ -25,5 +25,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChrisBrownie55/mui-phone-input.git"
+  }
 }
