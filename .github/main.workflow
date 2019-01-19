@@ -1,20 +1,20 @@
 workflow "Test and Publish" {
   on = "push"
   resolves = [
-    "Publish to NPM"
+    "Publish to NPM",
   ]
 }
 
 action "Run tests" {
-  uses = "actions/npm@de7a3705a9510ee12702e124482fad6af249991b"
+  uses = "borales/actions-yarn@master"
   needs = [
-    "Install Dependencies"
+    "Install Dependencies",
   ]
   args = "test"
 }
 
 action "Publish to NPM" {
-  uses = "actions/npm@de7a3705a9510ee12702e124482fad6af249991b"
+  uses = "borales/actions-yarn@master"
   needs = [
     "Run tests",
   ]
@@ -23,6 +23,6 @@ action "Publish to NPM" {
 }
 
 action "Install Dependencies" {
-  uses = "actions/npm@de7a3705a9510ee12702e124482fad6af249991b"
+  uses = "borales/actions-yarn@master"
   args = "install"
 }
