@@ -8,13 +8,17 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "react-scripts": "latest"
+    "jest": "^23.6.0",
+    "jest-dom": "^3.0.0",
+    "react-scripts": "latest",
+    "react-testing-library": "^5.4.4"
   },
   "keywords": [],
   "name": "mui-phone-input",
   "version": "0.0.1",
   "scripts": {
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "browserslist": [
     ">0.2%",
