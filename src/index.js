@@ -1,16 +1,24 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Demo from './demo';
-import { createMuiTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
+import PhoneInput from './PhoneInput';
 
-const theme = createMuiTheme({ typography: { useNextVariants: true } });
+class App extends React.Component {
+  state = {
+    value: ''
+  };
 
-ReactDOM.render(
-  <ThemeProvider theme={theme}>
-    <Demo />
-  </ThemeProvider>,
-  document.querySelector("#root")
-);
-    
+  handleChange = value => {
+    this.setState({ value });
+  };
+
+  render() {
+    return (
+      <div style={{ fontFamily: 'system-ui' }}>
+        <PhoneInput onChange={this.handleChange} />
+        <p>Your phone number: {this.state.value}</p>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));

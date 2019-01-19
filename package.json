@@ -1,21 +1,19 @@
 {
-  "title": "Material demo",
-  "description": "https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/text-fields/FilledTextFields.js",
+  "title": "Material Phone Input",
+  "description": "A phone number input built using material-ui's TextField",
+  "main": "src/index.js",
   "dependencies": {
     "@material-ui/core": "latest",
-    "react": "next",
-    "react-dom": "next"
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
   },
   "keywords": [],
-  "name": "phone-number-input",
-  "version": "0.0.37",
-  "devDependencies": {
-    "react-scripts": "1.0.0"
-  },
+  "name": "material-phone-input",
+  "version": "0.0.1",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "react-scripts start"
   }
 }

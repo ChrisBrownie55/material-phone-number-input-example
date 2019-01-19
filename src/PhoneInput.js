@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
-class FilledTextFields extends React.Component {
+class PhoneInput extends React.Component {
   state = {
     value: ''
   };
@@ -24,22 +24,26 @@ class FilledTextFields extends React.Component {
     this.setState({ value: newValue }, () => {
       selectionStart += Math.max(newValueArr.length - oldValueArr.length, 0);
       el.selectionStart = el.selectionEnd = selectionStart;
+
+      if (this.props.onChange) {
+        this.props.onChange(this.state.value);
+      }
     });
   };
 
   render() {
+    const { onChange, ...props } = this.props;
     return (
       <TextField
-        id="filled-name"
         label="Phone"
+        type="tel"
+        name="phone"
         value={this.state.value}
         onChange={this.handleChange}
-        margin="normal"
-        variant="filled"
-        type="tel"
+        {...props}
       />
     );
   }
 }
 
-export default FilledTextFields;
+export default PhoneInput;
