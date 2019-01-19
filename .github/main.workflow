@@ -14,7 +14,7 @@ action "Run tests" {
 }
 
 action "Publish to NPM" {
-  uses = "borales/actions-yarn@master"
+  uses = "actions/npm@de7a3705a9510ee12702e124482fad6af249991b"
   needs = [
     "Run tests",
   ]
