@@ -7,9 +7,11 @@ class PhoneInput extends React.Component {
     this.state = {
       value: ''
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = event => {
+  this.handleChange(event) {
     const el = event.target;
     let selectionStart = el.selectionStart;
 
