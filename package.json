@@ -1,7 +1,7 @@
 {
   "title": "Material Phone Input",
   "description": "A phone number input built using material-ui's TextField",
-  "main": "build/input.js",
+  "main": "dist/input.js",
   "dependencies": {
     "@material-ui/core": "latest",
     "react": "latest",
@@ -12,20 +12,17 @@
     "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
     "jest": "^23.6.0",
     "jest-dom": "^3.0.0",
     "react-testing-library": "^5.4.4",
-    "terser-webpack-plugin": "1.1.0",
-    "webpack": "4.19.1",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "3.1.14"
+    "rollup": "^1.1.1"
   },
   "keywords": [],
   "name": "mui-phone-input",
   "version": "1.0.2",
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack",
+    "build": "rollup",
     "test": "CI=true jest"
   },
   "browserslist": [
@@ -43,10 +40,6 @@
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts"
     ],
-    "resolver": "jest-pnp-resolver",
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
@@ -54,18 +47,12 @@
     "testEnvironment": "jsdom",
     "testURL": "http://localhost",
     "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
       "^.+\\.module\\.(css|sass|scss)$"
     ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
     "moduleFileExtensions": [
       "web.js",
       "js",
@@ -81,10 +68,7 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "@babel/preset-react"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }
