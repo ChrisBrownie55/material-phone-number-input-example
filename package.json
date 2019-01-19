@@ -21,7 +21,7 @@
   },
   "keywords": [],
   "name": "mui-phone-input",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "build": "rollup -c",
     "test": "CI=true jest"
