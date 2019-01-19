@@ -1,7 +1,7 @@
 {
   "title": "Material Phone Input",
   "description": "A phone number input built using material-ui's TextField",
-  "main": "src/PhoneInput.js",
+  "main": "build/input.js",
   "dependencies": {
     "@material-ui/core": "latest",
     "react": "latest",
@@ -18,7 +18,9 @@
   "version": "1.0.2",
   "scripts": {
     "start": "react-scripts start",
-    "test": "CI=true react-scripts test"
+    "test": "CI=true react-scripts test",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "browserslist": [
     ">0.2%",
