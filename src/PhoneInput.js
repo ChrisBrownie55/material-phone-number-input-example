@@ -21,13 +21,13 @@ class PhoneInput extends React.Component {
 
     const newValue = newValueArr.join('-');
 
+    if (this.props.onChange) {
+      this.props.onChange(newValue);
+    }
+
     this.setState({ value: newValue }, () => {
       selectionStart += Math.max(newValueArr.length - oldValueArr.length, 0);
       el.selectionStart = el.selectionEnd = selectionStart;
-
-      if (this.props.onChange) {
-        this.props.onChange(this.state.value);
-      }
     });
   };
 
