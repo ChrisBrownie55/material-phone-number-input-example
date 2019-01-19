@@ -18,7 +18,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "CI=true react-scripts test"
   },
   "browserslist": [
     ">0.2%",
