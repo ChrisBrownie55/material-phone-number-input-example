@@ -2,16 +2,11 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
 class PhoneInput extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ''
-    };
+  state = {
+    value: ''
+  };
 
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
+  handleChange = event => {
     const el = event.target;
     let selectionStart = el.selectionStart;
 
