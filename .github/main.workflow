@@ -43,7 +43,7 @@ workflow "Test and Build" {
 
 action "Build" {
   uses = "borales/actions-yarn@master"
-  runs = "build"
+  args = "build"
   needs = ["Run Tests"]
 }
 
