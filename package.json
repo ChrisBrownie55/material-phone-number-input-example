@@ -2,10 +2,10 @@
   "title": "Material Phone Input",
   "description": "A phone number input built using material-ui's TextField",
   "main": "dist/index.js",
-  "dependencies": {
-    "@material-ui/core": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+  "peerDependencies": {
+    "@material-ui/core": "~4.5.0",
+    "react": "~16.10.2",
+    "react-dom": "~16.10.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -13,9 +13,12 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^4.5.0",
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^9.3.0",
     "jest": "^24.9.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "rollup": "^1.1.1",
     "rollup-plugin-babel": "^4.3.2"
   },
